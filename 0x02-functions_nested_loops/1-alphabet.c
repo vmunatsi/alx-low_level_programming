@@ -1,15 +1,18 @@
-#include <main.h>
-#include <unistd.h>
+#include "main.h"
 
 /**
- * print_alphabet - prints the alphabet in lowercase, followed by a new line.
+ * print_alphabet - prints the english alphabet from a-z.
+ *
+ * Return: Nothing.
  */
 void print_alphabet(void)
 {
-	char letter;
+	char c = 'a';
 
-	for (letter = 'a'; letter <= 'z'; letter++)
-		_putchar(letter);
-
-	_putchar('\n');
+	while (c <= 'z')
+	{
+		_putchar(c);
+		c++;
+	}
+	_putchar ('\n');
 }
