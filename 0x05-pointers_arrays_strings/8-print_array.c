@@ -1,32 +1,20 @@
-#include "main.h"
-#include <stdlib.h>
-/* #include <string.h> */
+
 #include <stdio.h>
-/* #include <stddef.h> */
+#include "main.h"
 
 /**
- *_atoi - function that convert a string to an integer.
- *@s:pointer of caracter
- *Return: integer
+ * print_array - a function that prints n elements of an array
+ * @a: array name
+ * @n: is the number of elements OF the array to be printed
+ * Return: a and n inputs
  */
-
-int _atoi(char *s)
+void print_array(int *a, int n)
 {
-	int sum = 0;
-	/**
-     * On somme toutes les valeurs passées en arguments du programme.
-     * Pour ce faire on déplace le pointeur argv pour scanner tous
-     * les arguments
-     */
-	while (*s != 0)
-	 {
-	 	/* printf ("s = %d\n", *s); */
-                sum = atoi(s + '0');
-	 	s++;
-		printf ("sum = %d\n", sum);
-	 }
-	printf ("sum = %d\n", sum);
-		 /* int a = atoi( *sum);*/
+	int i;
 
-	return (0);
+	for (i = 0; i < (n - 1); i++)
+		printf("%d, ", a[i]);
+		if (i == (n - 1))
+			printf("%d", a[n - 1]);
+	printf("\n");
 }
