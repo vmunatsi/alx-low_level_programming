@@ -1,3 +1,4 @@
+
 #include "dog.h"
 #include <stdlib.h>
 
@@ -16,5 +17,3 @@ free(d->owner);
 free(d->name);
 free(d);
 }
-Footer
-
