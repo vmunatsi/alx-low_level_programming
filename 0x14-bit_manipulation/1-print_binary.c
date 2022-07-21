@@ -1,23 +1,13 @@
 #include "main.h"
 
 /**
- * _pow_recursion - Search a string for any of a set of bytes.
- * @x: base
- * @y: exposant
- * Return: Pointer to the byte in `s` that matches one of the bytes in `accept`
- * or NULL if no such byte is found.
+ * print_binary - function that prints the binary representation of a number
+ * @n: number to be printed in binary
  */
-
-unsigned long int _pow_recursion(int x, int y)
+void print_binary(unsigned long int n)
 {
+	if (n > 1)
+		print_binary(n >> 1);
 
-if (y < 0)
-	return (-1);
-else if (y == 1)
-	return (x);
-else if (y == 0)
-	return (1);
-
-return (x * _pow_recursion(x, y - 1));
-
+	_putchar((n & 1) + '0');
 }
